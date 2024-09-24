@@ -33,14 +33,14 @@ public class playerRotation : MonoBehaviour
     void Update()
     {
         // mouse inputs will not be gotten if disabled
-        if (cameraToggle) { calculateMouseInput(); }
+        if (cameraToggle) { getMouseInput(); }
         
         // assigns rotation of vertical and horizontal rotation
         transform.eulerAngles = new Vector3(0, horizontalRotation, 0);
         playerCam.transform.eulerAngles = new Vector3(verticalRotation, horizontalRotation, 0);
     }
 
-    void calculateMouseInput()
+    void getMouseInput()
     {
         // get input
         inputMouse = Input.mousePositionDelta;

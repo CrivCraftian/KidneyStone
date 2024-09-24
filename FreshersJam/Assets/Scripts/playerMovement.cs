@@ -19,7 +19,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         // movement inputs will not be gotten if disabled
-        if (movementToggle) { getInputValue(); }
+        if (movementToggle) { getKeyboardInput(); }
     }
 
     private void FixedUpdate()
@@ -31,20 +31,20 @@ public class playerMovement : MonoBehaviour
         playerRB.velocity = velocity;
     }
 
-    void getInputValue()
+    void getKeyboardInput()
     {
         // get input value of y
-        if (Input.GetKeyDown("w")) { inputMovement.y = 1; }
-        if (Input.GetKeyDown("s")) { inputMovement.y = -1; }
+        if (Input.GetKeyDown(KeyCode.W)) { inputMovement.y = 1; }
+        if (Input.GetKeyDown(KeyCode.S)) { inputMovement.y = -1; }
 
         // reset input value of x if there is no input
-        if (Input.GetKeyUp("w") || Input.GetKeyUp("s")) { inputMovement.y = 0; }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)) { inputMovement.y = 0; }
 
         // get input value of y
-        if (Input.GetKeyDown("d")) { inputMovement.x = 1; }
-        if (Input.GetKeyDown("a")) { inputMovement.x = -1; }
+        if (Input.GetKeyDown(KeyCode.D)) { inputMovement.x = 1; }
+        if (Input.GetKeyDown(KeyCode.A)) { inputMovement.x = -1; }
 
         // reset input value of y if there is no input
-        if (Input.GetKeyUp("a") || Input.GetKeyUp("d")) { inputMovement.x = 0; }
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) { inputMovement.x = 0; }
     }
 }
