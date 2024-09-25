@@ -16,7 +16,7 @@ public class playerRotation : MonoBehaviour
     [Tooltip("Clamp for vertical input")] [SerializeField] int verClamp = 81;
 
     // values
-    Camera playerCam;
+    [HideInInspector] public Camera playerCam;
     Vector2 inputMouse = Vector2.zero;
     float verticalRotation, horizontalRotation = 0f;
 
