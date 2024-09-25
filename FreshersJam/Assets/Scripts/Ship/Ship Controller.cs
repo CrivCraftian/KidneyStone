@@ -32,7 +32,6 @@ public class ShipController : MonoBehaviour
     void UpdateButton(RectTransform bar, float value)
     {
         bar.localScale = new Vector3(bar.localScale.x, 0.036f*value, bar.localScale.z);
-        // bar.localPosition = new Vector3(bar.localPosition.x, -170 + ((bar.localScale.y/2)*94.44444f), bar.localPosition.z);
     }
 
     void AlterPosition(Vector3 position)
