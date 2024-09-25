@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class interactClass : MonoBehaviour
+public interface interactClass
 {
-   public abstract void useInteraction();
-
-
+   public abstract void Use();
 }

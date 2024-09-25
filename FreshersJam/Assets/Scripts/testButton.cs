@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testButton : interactClass
+public class testButton : MonoBehaviour, interactClass
 {
-    
-
-    public override void useInteraction()
+    public void Use()
     {
-        Debug.log("aa");
+        
     }
 }
