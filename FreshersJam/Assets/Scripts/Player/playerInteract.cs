@@ -29,7 +29,7 @@ public class playerInteract : MonoBehaviour
 
         // IF YOU ARE LOOKING AT THIS BRANCH (hi by the way), YOU CAN TEST THE DIFFERENCE BETWEEN
         // mouseClickActive AND getMouseInputState() BY SWAPPING IT IN THIS IF STATEMENT
-        if (getMouseInputState())
+        if (mouseClickActive)
         {
             // create a ray that converts the position of the mouse into a ray in world space 
             Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
