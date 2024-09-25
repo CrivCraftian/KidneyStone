@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface interactClass
 {
-   public abstract void Use();
+    public abstract void useClick();
+    public abstract void useHold();
 }
