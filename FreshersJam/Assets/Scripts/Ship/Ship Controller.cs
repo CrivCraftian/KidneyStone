@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
     public Vector3 shipPosition {  get; private set; }
+
     public int FuelCount { get; private set; }
     public int HullIntegrity { get; private set; }
 
@@ -13,11 +15,15 @@ public class ShipController : MonoBehaviour
     [SerializeField] private RectTransform fuelBar;
     [SerializeField] private RectTransform HullBar;
 
+    [SerializeField] private TextMeshProUGUI[] TextDisplays = new TextMeshProUGUI[3];
+
     // Start is called before the first frame update
     void Start()
     {
         FuelCount = 10;
         HullIntegrity = 10;
+
+        shipPosition = new Vector3(1463, -245, 245);
 
         fuelBarWidth = fuelBar.localScale.y/10f;
     }
@@ -25,6 +31,7 @@ public class ShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateDisplays();
         UpdateButtons();
     }
 
@@ -42,6 +49,18 @@ public class ShipController : MonoBehaviour
     void AlterPosition(Vector3 position)
     {
         shipPosition += position;
+    }
+
+    void UpdateDisplays()
+    {
+        UpdatePosDisplay();
+    }
+
+    void UpdatePosDisplay()
+    {
+        TextDisplays[0].text = "X: " + (int)shipPosition.x;
+        TextDisplays[1].text = "Y: " + (int)shipPosition.y;
+        TextDisplays[2].text = "Z: " + (int)shipPosition.z;
     }
 
     void AlterFuel(int fuel)
