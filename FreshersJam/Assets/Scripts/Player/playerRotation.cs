@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class playerRotation : MonoBehaviour
 {
-    [Header("Settings")]
-    [Tooltip("Enable or disable camera movement")] [SerializeField] bool cameraToggle = true;
+    [Header("SETTINGS")]
+    [Tooltip("Enable or disable camera movement")] public bool cameraToggle = true;
+    [Tooltip("Enable or disable resetting horizontal clamp at max or min value")] public bool resetHorClamp = true;
 
-    [Header("Camera Sensitivity")]
-    [Tooltip("Sensitivity for x axis")] [SerializeField] float xSens = 10f;
-    [Tooltip("Sensitivity for y axis")] [SerializeField] float ySens = 10f;
+    [Header("CAMERA SENSITIVITY SETTINGS")]
+    [Tooltip("Sensitivity for x axis")] public float xSens = 10f;
+    [Tooltip("Sensitivity for y axis")] public float ySens = 10f;
 
-    [Header("Camera Clamp")]
-    [Tooltip("Clamp for horizontal input")] [SerializeField] int horClamp = 361;
-    [Tooltip("Clamp for vertical input")] [SerializeField] int verClamp = 81;
+    [Header("CAMERA CLAMP SETTINGS")]
+    [Tooltip("Clamp for horizontal input")] public int horClamp = 361;
+    [Tooltip("Clamp for vertical input")] public int verClamp = 81;
+
+    int defaultHorClamp, defaultVerClamp;
 
     // values
-    Camera playerCam;
-    Vector2 inputMouse = Vector2.zero;
-    float verticalRotation, horizontalRotation = 0f;
+    [HideInInspector] public Camera playerCam;
+    Vector2 inputMouse, rotationValues = Vector2.zero;
 
     // ensures that playerCam is assigned
     private void Awake() { playerCam = GetComponentInChildren<Camera>(); }
 
     private void Start()
     {
+        // assigns default clamp values on start
+        defaultHorClamp = horClamp;
+        defaultVerClamp = verClamp;
+
         // hides and locks mouse in place
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -36,8 +42,8 @@ public class playerRotation : MonoBehaviour
         if (cameraToggle) { getMouseInput(); }
         
         // assigns rotation of vertical and horizontal rotation
-        transform.eulerAngles = new Vector3(0, horizontalRotation, 0);
-        playerCam.transform.eulerAngles = new Vector3(verticalRotation, horizontalRotation, 0);
+        transform.eulerAngles = new Vector3(0, rotationValues.x, 0);
+        playerCam.transform.eulerAngles = new Vector3(rotationValues.y, rotationValues.x, 0);
     }
 
     void getMouseInput()
@@ -46,14 +52,36 @@ public class playerRotation : MonoBehaviour
         inputMouse = Input.mousePositionDelta;
 
         // add input to current rotation values
-        horizontalRotation += inputMouse.x * xSens * Time.deltaTime;
-        verticalRotation += -inputMouse.y * ySens * Time.deltaTime;
+        rotationValues.x += inputMouse.x * xSens * Time.deltaTime;
+        rotationValues.y += -inputMouse.y * ySens * Time.deltaTime;
 
         // lock vertical and horizontal rotation to specific values
-        horizontalRotation = Mathf.Clamp(horizontalRotation, -horClamp, horClamp);
-        verticalRotation = Mathf.Clamp(verticalRotation, -verClamp, verClamp);
+        rotationValues.x = Mathf.Clamp(rotationValues.x, -horClamp, horClamp);
+        rotationValues.y = Mathf.Clamp(rotationValues.y, -verClamp, verClamp);
 
         // sets horizontal rotation to 0 if camera has made full horizontal rotation
-        if (horizontalRotation == horClamp || horizontalRotation == -horClamp) { horizontalRotation = 0f; }
+        if ((rotationValues.x == horClamp || rotationValues.x == -horClamp) && resetHorClamp) { rotationValues.x = 0f; }
+    }
+
+    public void forceCamera(Vector2 newAngle)
+    {
+        // forces the camera to look at specified vector2 values
+        rotationValues.x = newAngle.x;
+        rotationValues.y = newAngle.y;
+
+    }
+
+    public void changeClamp(int newHorClamp, int newVerClamp)
+    {
+        // can be used to limit player camera rotation (doesn't change if new value is 0)
+        horClamp = (newHorClamp == 0) ? defaultHorClamp : newHorClamp;
+        verClamp = (newHorClamp == 0) ? defaultVerClamp : newVerClamp;
+    }
+
+    public void revertClamp()
+    {
+        // can be used to reset clamp values without using changeClamp
+        horClamp = defaultHorClamp;
+        verClamp = defaultVerClamp;
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    [Header("Settings")]
-    [Tooltip("Enable or disable movement")] [SerializeField] bool movementToggle = true;
-    [Tooltip("Set movement speed")] [SerializeField] float movementSpeed = 100f;
+    [Header("SETTINGS")]
+    [Tooltip("Enable or disable movement")] public bool movementToggle = true;
+    [Tooltip("Set movement speed")] public float movementSpeed = 100f;
 
     // values
-    Rigidbody playerRB;
-    Vector2 inputMovement = Vector2.zero;
-    Vector3 velocity = Vector3.zero;
+    [HideInInspector] public Rigidbody playerRB;
+    [HideInInspector] public Vector2 inputMovement = Vector2.zero;
+    [HideInInspector] public Vector3 velocity = Vector3.zero;
 
     // ensures that playerRB is assigned
     private void Awake() { playerRB = GetComponent<Rigidbody>(); }
@@ -46,5 +46,14 @@ public class playerMovement : MonoBehaviour
 
         // reset input value of y if there is no input
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) { inputMovement.x = 0; }
+    }
+
+    public void toggleMovement(bool newStatus)
+    {
+        // toggles movement and resets values relating to movement
+        movementToggle = newStatus;
+        playerRB.velocity = Vector3.zero;
+        velocity = Vector3.zero;
+        inputMovement = Vector3.zero;
     }
 }
