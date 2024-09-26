@@ -464,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 523041067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -612,8 +612,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sitDownTransform: {fileID: 1951195220}
-  sitUpTransform: {fileID: 523041068}
+  standUpTransform: {fileID: 523041068}
   defaultCameraAngle: {x: 0, y: 0}
+  changeCameraClamp: {x: 60, y: 50}
 --- !u!65 &1281961810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -633,8 +634,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.8217505}
+  m_Center: {x: 0, y: 0, z: 0.41087526}
 --- !u!23 &1281961811
 MeshRenderer:
   m_ObjectHideFlags: 0

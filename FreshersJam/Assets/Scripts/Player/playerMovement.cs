@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("SETTINGS")]
     [Tooltip("Enable or disable movement")] public bool movementToggle = true;
-    [Tooltip("Set movement speed")] [SerializeField] float movementSpeed = 100f;
+    [Tooltip("Set movement speed")] public float movementSpeed = 100f;
 
     // values
     [HideInInspector] public Rigidbody playerRB;
@@ -46,5 +46,14 @@ public class playerMovement : MonoBehaviour
 
         // reset input value of y if there is no input
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) { inputMovement.x = 0; }
+    }
+
+    public void toggleMovement(bool newStatus)
+    {
+        // toggles movement and resets values relating to movement
+        movementToggle = newStatus;
+        playerRB.velocity = Vector3.zero;
+        velocity = Vector3.zero;
+        inputMovement = Vector3.zero;
     }
 }
