@@ -46,7 +46,7 @@ public class ShipController : MonoBehaviour
         bar.localScale = new Vector3(bar.localScale.x, fuelBarWidth*value, bar.localScale.z);
     }
 
-    void AlterPosition(Vector3 position)
+    public void AlterPosition(Vector3 position)
     {
         shipPosition += position;
     }
