@@ -772,9 +772,9 @@ MonoBehaviour:
   fuelBar: {fileID: 558047135}
   HullBar: {fileID: 63163075}
   TextDisplays:
-  - {fileID: 1588258102}
-  - {fileID: 303273109}
-  - {fileID: 1026263475}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &467586019
 Transform:
   m_ObjectHideFlags: 0
