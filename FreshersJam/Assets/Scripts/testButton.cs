@@ -5,6 +5,9 @@ using UnityEngine;
 public class testButton : MonoBehaviour, interactClass
 {
     public void useClick() { }
-    public void useHold() { }
+    public void useHold() 
+    {
+        Debug.Log("aaa");
+    }
     
 }
