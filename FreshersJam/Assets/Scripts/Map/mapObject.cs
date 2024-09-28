@@ -31,7 +31,8 @@ public class mapObject : MonoBehaviour
         coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z);
 
         // puts the object in its position on the map and sets its color to be out of range
-        transform.localPosition = mapContollerRef.normPosToMapScreenPos(mapContollerRef.mapPosToNormPos(position));
+        Vector3 mapPos = mapContollerRef.normPosToMapScreenPos(mapContollerRef.mapPosToNormPos(position));
+        transform.localPosition = new Vector3(mapPos.x, mapPos.y, transform.localPosition.z);
         GetComponent<RawImage>().color = outRangeColor;
     }
 
