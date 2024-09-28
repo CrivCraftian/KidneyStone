@@ -8,7 +8,7 @@ public class mapObject : MonoBehaviour
 {
     [Header("COMPONENTS")]
     public mapContoller mapContollerRef;
-    public TMP_Text coordsRef;
+    
 
     [Header("SETTINGS")]
     public Vector3 position;
@@ -21,7 +21,8 @@ public class mapObject : MonoBehaviour
     [Tooltip("when player is outside range")] public Color outRangeColor;
 
     //values
-    BoxCollider2D areaRef;
+    BoxCollider areaRef;
+    TMP_Text coordsRef;
     //bool inZAxisRange = false; // -- use when implementing z axis checking
 
     private void Awake()
@@ -41,7 +42,7 @@ public class mapObject : MonoBehaviour
         // check for z axis range here
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         // add inZAxisRange when z axis range checking is implemented
         if (collision.CompareTag("shipScanPos"))
@@ -51,7 +52,7 @@ public class mapObject : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         // add inZAxisRange when z axis range checking is implemented?
         if (collision.CompareTag("shipScanPos"))
