@@ -2427,9 +2427,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapContollerRef: {fileID: 3779549995495342818}
-  position: {x: 1000, y: -490, z: 0}
-  zAxisRange: 100
+  shipControllerRef: {fileID: 467586018}
+  position: {x: 1000, y: -490, z: 10}
+  zAxisRange: 10
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
+  inZRangeColor: {r: 1, g: 0.5707547, b: 0.6061044, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!222 &513917442821369447
 CanvasRenderer:
@@ -3443,9 +3445,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapContollerRef: {fileID: 3779549995495342818}
+  shipControllerRef: {fileID: 467586018}
   position: {x: -324, y: -900, z: 0}
   zAxisRange: 100
   inRangeColor: {r: 0, g: 1, b: 0.62849045, a: 1}
+  inZRangeColor: {r: 0.5855287, g: 0.9622642, b: 0.8219117, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!1 &1644191700907692367
 GameObject:
@@ -4872,9 +4876,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapContollerRef: {fileID: 3779549995495342818}
+  shipControllerRef: {fileID: 467586018}
   position: {x: -750, y: 500, z: 0}
   zAxisRange: 100
   inRangeColor: {r: 0.3890928, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.6732771, g: 0.990566, b: 0.4719206, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!4 &3379676212017100822
 Transform:
@@ -5287,7 +5293,7 @@ MonoBehaviour:
   minMapPos: {x: -1000, y: -1000, z: -1000}
   maxMapPos: {x: 1000, y: 1000, z: 1000}
   normalisedPosition: {x: 0, y: 0, z: 0}
-  boxEdgePos: {x: -45, y: 45, z: 45, w: -45}
+  boxEdgePos: {x: -42, y: 42, z: 42, w: -42}
 --- !u!1 &3849762624831392317
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,9 +6009,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapContollerRef: {fileID: 3779549995495342818}
+  shipControllerRef: {fileID: 467586018}
   position: {x: 900, y: 350, z: 0}
   zAxisRange: 100
   inRangeColor: {r: 0.21076632, g: 0, b: 1, a: 1}
+  inZRangeColor: {r: 0.5851219, g: 0.48126557, b: 0.9716981, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!23 &4609719360031314523
 MeshRenderer:

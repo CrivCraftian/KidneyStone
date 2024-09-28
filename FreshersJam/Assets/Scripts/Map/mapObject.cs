@@ -8,7 +8,7 @@ public class mapObject : MonoBehaviour
 {
     [Header("COMPONENTS")]
     public mapContoller mapContollerRef;
-    
+    public ShipController shipControllerRef;
 
     [Header("SETTINGS")]
     public Vector3 position;
@@ -18,12 +18,14 @@ public class mapObject : MonoBehaviour
         "EXAMPLE: if Z is 200 and range is 100, player can be between 100 and 300 and be in range to interact with it")] public float zAxisRange = 100;
 
     [Tooltip("when player is in range")] public Color inRangeColor;
+    [Tooltip("when player is in z axis range")] public Color inZRangeColor;
     [Tooltip("when player is outside range")] public Color outRangeColor;
 
     //values
     BoxCollider areaRef;
     TMP_Text coordsRef;
-    //bool inZAxisRange = false; // -- use when implementing z axis checking
+    bool inZAxisRange = false; // -- use when implementing z axis checking
+    bool inRange = false;
 
     private void Awake()
     {
@@ -39,32 +41,70 @@ public class mapObject : MonoBehaviour
 
     private void Update()
     {
-        // check for z axis range here
+        // checks for z axis range
+        if ((shipControllerRef.shipPosition.z <= position.z + zAxisRange && shipControllerRef.shipPosition.z >= position.z - zAxisRange) && !inZAxisRange)
+        {
+            inZAxisRange = true;
+            if (!inRange)
+            {
+                determineColor(false);
+            }
+        }
+
+        if (!(shipControllerRef.shipPosition.z <= position.z + zAxisRange && shipControllerRef.shipPosition.z >= position.z - zAxisRange) && inZAxisRange)
+        { 
+            inZAxisRange = false; 
+            determineColor(false); 
+        }
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerStay(Collider collision)
     {
-        // add inZAxisRange when z axis range checking is implemented
-        if (collision.CompareTag("shipScanPos"))
+        if (collision.CompareTag("shipScanPos") && inZAxisRange && !inRange)
         {
-            Debug.Log("hi ship");
-            determineColor(true);
+            inRange = true;
+            onEnter();
+        }
+
+        if (collision.CompareTag("shipScanPos") && !inZAxisRange && inRange)
+        {
+            onExit();
+            inRange = false;
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        // add inZAxisRange when z axis range checking is implemented?
         if (collision.CompareTag("shipScanPos"))
         {
-            Debug.Log("bye ship");
-            determineColor(false);
+            onExit();
+            inRange = false;
         }
+    }
+
+    private void onEnter()
+    {
+        Debug.Log("hi ship");
+        determineColor(true);
+    }
+
+    private void onExit()
+    {
+        Debug.Log("bye ship");
+        determineColor(false);
     }
 
     private void determineColor(bool status)
     {
         if (status) { GetComponent<RawImage>().color = inRangeColor; }
-        else { GetComponent<RawImage>().color = outRangeColor; }
+        else 
+        { 
+            if (inZAxisRange)
+            {
+                GetComponent<RawImage>().color = inZRangeColor;
+            }
+
+            else { GetComponent<RawImage>().color = outRangeColor; }          
+        }
     }
 }
