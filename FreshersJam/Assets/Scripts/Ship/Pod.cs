@@ -16,4 +16,9 @@ public class Pod
     {
         store = null;
     }
+
+    public bool IsEmpty()
+    {
+        return store == null ? true : false;
+    }
 }
