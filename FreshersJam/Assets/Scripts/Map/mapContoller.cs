@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class mapContoller : MonoBehaviour
 {
     [Header("SETTINGS")]
+    public ShipController shipControllerRef;
     public RectTransform mapScreen;
     public ScrollRect mapRect;
-    public Vector3 defaultPosition;
 
     [Header("NORMALISED POSITION CLAMP SETTINGS")]
     [Tooltip("USE TO LIMIT MOVEMENT ON MAP (ALSO DETERMINES MIN/MAX OF NORMALISED POSITIONS)")] public Vector3 minNormPosClamp;
@@ -20,7 +20,6 @@ public class mapContoller : MonoBehaviour
 
     // values
     [HideInInspector] public Vector3 normalisedPosition;
-    Vector3 position; // not used here since callum is doing the real version of ship movement
 
     // NOTE: i would've made this be done automatically but im idk how i'd get it accurately (and its not a big enough priority to worry about)
     // can be assigned manually by going around the edges of the map and use the x and y values that show up in "mapMain" (at least thats what its called in the prefab)
@@ -30,7 +29,7 @@ public class mapContoller : MonoBehaviour
     private void Awake()
     {
         // assigns normalisedPosition the converted default position
-        normalisedPosition = mapPosToNormPos(defaultPosition);
+        normalisedPosition = mapPosToNormPos(shipControllerRef.shipPosition);
 
         // sets the position of the ship on start
         mapRect.horizontalNormalizedPosition = normalisedPosition.x;
@@ -39,7 +38,17 @@ public class mapContoller : MonoBehaviour
 
     private void Update()
     {
+        Vector3 clampShip = shipControllerRef.shipPosition;
+        clampShip.x = Mathf.Clamp(clampShip.x, minMapPos.x, maxMapPos.x);
+        clampShip.y = Mathf.Clamp(clampShip.y, minMapPos.y, maxMapPos.y);
+        clampShip.z = Mathf.Clamp(clampShip.z, minMapPos.z, maxMapPos.z);
+
+        shipControllerRef.ForcePosition(clampShip);
+
+        normalisedPosition = mapPosToNormPos(shipControllerRef.shipPosition);
+
         // clamps normalisedPosition so it stays within chosen area
+        // seems to work without this but im not taking any chances
         normalisedPosition.x = Mathf.Clamp(normalisedPosition.x, minNormPosClamp.x, maxNormPosClamp.x);
         normalisedPosition.y = Mathf.Clamp(normalisedPosition.y, minNormPosClamp.y, maxNormPosClamp.y);
         normalisedPosition.z = Mathf.Clamp(normalisedPosition.z, minNormPosClamp.z, maxNormPosClamp.z);

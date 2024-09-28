@@ -138,7 +138,7 @@ public class Joystick : MonoBehaviour, interactClass
 
                 float rotationAngle = BaseRotation - Mathf.Clamp(horizontalDistance * MaxRotation, -MaxRotation, MaxRotation);
 
-                AlteredPosition = -(((rotationAngle - 100) * Time.deltaTime)/4);
+                AlteredPosition = -(((rotationAngle - 100) * MoveSpeed * Time.deltaTime)/4);
 
                 joyBase.localRotation = Quaternion.Euler(new Vector3(0, rotationAngle, 0));
             }
