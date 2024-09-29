@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerInteract : MonoBehaviour
 {
     [Header("SETTINGS")]
-    [Tooltip("Enable or disable interaction")] public bool interactionToggle = true;
+    [Tooltip("Enable or disable interaction")] [SerializeField] bool interactionToggle = true;
     [Tooltip("Enable or disable raycast debug")][SerializeField] bool debugRayToggle = false;
     [Tooltip("Sets the length of the raycast")] [SerializeField] float raycastRange = 2.5f;
 
@@ -13,8 +13,7 @@ public class playerInteract : MonoBehaviour
     Camera playerCamera;
     Ray ray;
     RaycastHit hit;
-    bool rayDetected = false;
-    [HideInInspector] public bool mouseClickActive = false;
+    bool rayDetected, mouseClickActive = false;
 
     // ensures that playerCamera is assigned
     private void Awake() { playerCamera = GetComponentInChildren<Camera>(); }

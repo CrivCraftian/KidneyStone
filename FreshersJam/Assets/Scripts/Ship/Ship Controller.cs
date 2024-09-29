@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,10 +10,9 @@ public class ShipController : MonoBehaviour
     public int FuelCount { get; private set; }
     public int HullIntegrity { get; private set; }
 
-    [SerializeField] float movementCounterLimit = 750f;
-    [HideInInspector] public float movementCounter;
-
     float fuelBarWidth = 0;
+
+    [SerializeField] ManifestController manifestController;
 
     [SerializeField] private RectTransform fuelBar;
     [SerializeField] private RectTransform HullBar;
@@ -24,7 +25,7 @@ public class ShipController : MonoBehaviour
         FuelCount = 10;
         HullIntegrity = 10;
 
-        shipPosition = new Vector3(-900, -936, 353);
+        shipPosition = new Vector3(1000, -600, 0);
 
         fuelBarWidth = fuelBar.localScale.y/10f;
     }
@@ -34,18 +35,6 @@ public class ShipController : MonoBehaviour
     {
         UpdateDisplays();
         UpdateButtons();
-        movementCheck();
-    }
-
-    public void movementCheck()
-    {
-        movementCounter = Mathf.Clamp(movementCounter, 0, movementCounterLimit);
-
-        if (movementCounter == movementCounterLimit)
-        {
-            movementCounter = 0;
-            AlterFuel(FuelCount-1);
-        }
     }
 
     void UpdateButtons()

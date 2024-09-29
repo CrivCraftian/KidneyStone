@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class mapObject : MonoBehaviour
+public class mapObject : MonoBehaviour, ISender
 {
+    [SerializeField] ManifestController manifestController;
+    [SerializeField] AbstractSObject spaceObject;
+
     [Header("COMPONENTS")]
     public mapContoller mapContollerRef;
     public ShipController shipControllerRef;
@@ -75,7 +78,7 @@ public class mapObject : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.CompareTag("shipScanPos") && inRange)
+        if (collision.CompareTag("shipScanPos"))
         {
             onExit();
             inRange = false;
@@ -84,13 +87,13 @@ public class mapObject : MonoBehaviour
 
     private void onEnter()
     {
-        Debug.Log("hi ship");
+        manifestController.SendToManifest(this, spaceObject);
         determineColor(true);
     }
 
     private void onExit()
     {
-        Debug.Log("bye ship");
+        manifestController.ClearManifest();
         determineColor(false);
     }
 
@@ -106,5 +109,11 @@ public class mapObject : MonoBehaviour
 
             else { GetComponent<RawImage>().color = outRangeColor; }          
         }
+    }
+
+    public void SpaceObjectProcessed()
+    {
+        Debug.Log("Object Getting Destroyed");
+        Destroy(this.gameObject);
     }
 }
