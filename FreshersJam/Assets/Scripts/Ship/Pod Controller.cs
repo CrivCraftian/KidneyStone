@@ -14,6 +14,9 @@ public class PodController : MonoBehaviour
         {
             pods.Add(new Pod());
         }
+
+        pods[2].FillPod(new Scrap(4));
+        pods[4].FillPod(new Person("Bob", "He digs", 15));
     }
 
     public bool FillPod(AbstractSObject spaceObject)
