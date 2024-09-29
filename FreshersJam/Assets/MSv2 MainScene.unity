@@ -2741,6 +2741,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3231516552487260109, guid: 0e6243a73518ad348b98302a967276ec, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3231516552487260109, guid: 0e6243a73518ad348b98302a967276ec, type: 3}
       propertyPath: field of view
       value: 60
       objectReference: {fileID: 0}
