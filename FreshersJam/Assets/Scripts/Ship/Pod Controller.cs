@@ -16,22 +16,7 @@ public class PodController : MonoBehaviour
         }
 
         pods[2].FillPod(new Scrap(4));
-        pods[4].FillPod(new Person("Bob", "He digs", 15));
-    }
-
-    public bool FillPod(AbstractSObject spaceObject)
-    {
-        for (int i = 0; i < pods.Count; i++)
-        {
-            if (pods[i].IsEmpty())
-            {
-                pods[i].FillPod(spaceObject);
-                displayController.UpdatePodIcons();
-                return true;
-            }
-        }
-
-        return false;
+        pods[4].FillPod(new Person("Bob", "He digs"));
     }
 
     public Pod GetPod(int podnum)

@@ -12,8 +12,6 @@ public class ShipController : MonoBehaviour
 
     float fuelBarWidth = 0;
 
-    [SerializeField] ManifestController manifestController;
-
     [SerializeField] private RectTransform fuelBar;
     [SerializeField] private RectTransform HullBar;
 

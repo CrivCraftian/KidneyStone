@@ -1,11 +1,9 @@
 
 public class Person : AbstractSObject
 {
-    public Person(string name, string description, int value)
+    public Person(string name, string description)
     {
         Name = name; 
         Description = description;
-
-        Value = value;
     }
 }
