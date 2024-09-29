@@ -8020,7 +8020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manifestController: {fileID: 467586022}
-  spaceObject: {fileID: 8391899665193608954}
+  spaceObject: {fileID: 8232647000095773044}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: -324, y: -900, z: 754}
@@ -8819,6 +8819,7 @@ GameObject:
   - component: {fileID: 7595707465676091220}
   - component: {fileID: 3354096986157284682}
   - component: {fileID: 8447101982849703353}
+  - component: {fileID: 8447101982849703354}
   - component: {fileID: 6899183749644392222}
   m_Layer: 0
   m_Name: exampleC
@@ -8967,6 +8968,7 @@ GameObject:
   - component: {fileID: 2906325073448483821}
   - component: {fileID: 1641357620501740864}
   - component: {fileID: 8232647000095773043}
+  - component: {fileID: 8232647000095773044}
   - component: {fileID: 6054653350757965753}
   m_Layer: 0
   m_Name: exampleD
@@ -9343,6 +9345,7 @@ GameObject:
   - component: {fileID: 2878441634106025966}
   - component: {fileID: 4560305227411797280}
   - component: {fileID: 1236610479815131898}
+  - component: {fileID: 4560305227411797281}
   - component: {fileID: 4286148598330120300}
   m_Layer: 0
   m_Name: exampleB
@@ -9482,7 +9485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manifestController: {fileID: 467586022}
-  spaceObject: {fileID: 8391899665193608954}
+  spaceObject: {fileID: 8447101982849703354}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: -750, y: 500, z: -246}
@@ -10651,7 +10654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manifestController: {fileID: 467586022}
-  spaceObject: {fileID: 8391899665193608954}
+  spaceObject: {fileID: 4560305227411797281}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: 900, y: 350, z: 945}
@@ -10659,6 +10662,21 @@ MonoBehaviour:
   inRangeColor: {r: 0.21176481, g: 0, b: 1, a: 1}
   inZRangeColor: {r: 0.7422265, g: 0.6745283, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
+--- !u!114 &4560305227411797281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3061438314526159934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490ed88c12118b84fb29861ef046a8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Space Vampire
+  Description: Dunno how he got up here
+  Value: -20
 --- !u!23 &4609719360031314523
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13521,6 +13539,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8232647000095773044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818415000989943238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490ed88c12118b84fb29861ef046a8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Ruined Space Craft
+  Description: Parts of a ruined space craft
+  Value: 82
 --- !u!33 &8276621263915240538
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13760,6 +13793,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8447101982849703354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571434949123404366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972aa078be87af641801d1bcfb8049cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Iron Scrap
+  Description: A large amount of iron scrap
+  Value: 30
 --- !u!23 &8459503167574793447
 MeshRenderer:
   m_ObjectHideFlags: 0
