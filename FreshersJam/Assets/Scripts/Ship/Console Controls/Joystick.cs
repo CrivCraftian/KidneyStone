@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.Android;
 
 public enum Axis
 {
@@ -32,6 +33,8 @@ public class Joystick : MonoBehaviour, interactClass
     [SerializeField] bool reset = false;
 
     bool clicked = false;
+
+    [HideInInspector] public bool paused = false;
 
     public void useClick()
     {
@@ -66,8 +69,11 @@ public class Joystick : MonoBehaviour, interactClass
     // Update is called once per frame
     void Update()
     {
-        Resetting();
-        MoveTowardMouse(Time.deltaTime);
+        if (!paused)
+        {
+            Resetting();
+            MoveTowardMouse(Time.deltaTime);
+        }
     }
 
     public void ResetPosition()

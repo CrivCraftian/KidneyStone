@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerInteract : MonoBehaviour
 {
     [Header("SETTINGS")]
-    [Tooltip("Enable or disable interaction")] [SerializeField] bool interactionToggle = true;
+    [Tooltip("Enable or disable interaction")] public bool interactionToggle = true;
     [Tooltip("Enable or disable raycast debug")][SerializeField] bool debugRayToggle = false;
     [Tooltip("Sets the length of the raycast")] [SerializeField] float raycastRange = 2.5f;
 
