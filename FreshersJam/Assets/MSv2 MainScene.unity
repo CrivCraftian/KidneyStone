@@ -1773,6 +1773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baca3af37ff7852448cd7cee44516738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementCounterLimit: 650
+  movementCounter: 0
   fuelBar: {fileID: 558047135}
   HullBar: {fileID: 63163075}
   TextDisplays:
@@ -6254,30 +6256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915097995}
   m_CullTransparentMesh: 1
---- !u!114 &1922583034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6987431770194123051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf8f6c1a90272dc478928c23077d62fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 0.01
-  camera: {fileID: 0}
-  controller: {fileID: 467586018}
-  PhysicalOrientation: 0
-  direction: 1
-  BaseRotation: 100
-  MaxRotation: 60
-  ResetSpeed: 0
-  joyBase: {fileID: 0}
-  temp: {fileID: 0}
-  reset: 0
-  paused: 0
 --- !u!65 &1922583035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12205,7 +12183,6 @@ GameObject:
   - component: {fileID: 5451850438340344600}
   - component: {fileID: 642787389237292613}
   - component: {fileID: 1922583035}
-  - component: {fileID: 1922583034}
   m_Layer: 0
   m_Name: Stick_Center
   m_TagString: Untagged
