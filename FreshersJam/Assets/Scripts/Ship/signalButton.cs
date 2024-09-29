@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class signalButton : MonoBehaviour, interactClass 
 {
+    public GameObject signalOBJ;
     public GameObject player;
     public GameObject endScreen;
     public Slider sliderRef;
@@ -20,7 +21,7 @@ public class signalButton : MonoBehaviour, interactClass
 
     public void useClick() 
     {
-        if (canUseSignal) { sliderRef.gameObject.SetActive(true);  }
+        if (canUseSignal) { signalOBJ.SetActive(true);  }
     }
     public void useHold() 
     { 
@@ -29,7 +30,7 @@ public class signalButton : MonoBehaviour, interactClass
 
     private void Awake()
     {
-        sliderRef.gameObject.SetActive(false);
+        signalOBJ.SetActive(false);
         endScreen.SetActive(false);
         playerRotationRef = player.GetComponent<playerRotation>();
         playerMovementRef = player.GetComponent<playerMovement>();
@@ -47,8 +48,8 @@ public class signalButton : MonoBehaviour, interactClass
                 value -= 0.0025f;
                 if (value <= 0) 
                 { 
-                    isHolding = false; 
-                    sliderRef.gameObject.SetActive(false);
+                    isHolding = false;
+                    signalOBJ.SetActive(false);
                 }
             }
 
@@ -58,8 +59,8 @@ public class signalButton : MonoBehaviour, interactClass
         sliderRef.value = value;
 
         if (value >= 1)
-        {            
-            sliderRef.gameObject.SetActive(false);            
+        {
+            signalOBJ.SetActive(false);            
             canUseSignal = false;
             playerRotationRef.cameraToggle = false;
             playerMovementRef.movementToggle = false;
