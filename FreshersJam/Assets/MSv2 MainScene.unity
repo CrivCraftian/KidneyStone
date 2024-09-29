@@ -2006,9 +2006,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05ce574d8a6e7f4e865b4a1de8f1848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMain: {fileID: 0}
-  player: {fileID: 0}
-  joysticks: []
+  pauseMain: {fileID: 470615630}
+  player: {fileID: 538502969}
+  joysticks:
+  - {fileID: 328591794}
+  - {fileID: 1689733671}
+  - {fileID: 1479098158}
   pauseToggle: 1
 --- !u!1001 &538502968
 PrefabInstance:
@@ -2087,6 +2090,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6243a73518ad348b98302a967276ec, type: 3}
+--- !u!1 &538502969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4002568851595873000, guid: 0e6243a73518ad348b98302a967276ec, type: 3}
+  m_PrefabInstance: {fileID: 538502968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &558047135 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7660536063514955936, guid: 42b8d6b8e3bcd1642a9c557a2f396084, type: 3}
@@ -2774,10 +2782,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0feeb614ad812a40bb0a86041d48c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalOBJ: {fileID: 0}
-  player: {fileID: 0}
-  endScreen: {fileID: 0}
-  sliderRef: {fileID: 0}
+  signalOBJ: {fileID: 746096992}
+  player: {fileID: 538502969}
+  endScreen: {fileID: 1408455481}
+  sliderRef: {fileID: 217841277}
   joysticks: []
 --- !u!1 &828699550
 GameObject:
@@ -8011,8 +8019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b643e5d4e1cae9240984534c5a6f2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manifestController: {fileID: 0}
-  spaceObject: {fileID: 0}
+  manifestController: {fileID: 467586022}
+  spaceObject: {fileID: 8391899665193608954}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: -324, y: -900, z: 754}
@@ -9473,8 +9481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b643e5d4e1cae9240984534c5a6f2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manifestController: {fileID: 0}
-  spaceObject: {fileID: 0}
+  manifestController: {fileID: 467586022}
+  spaceObject: {fileID: 8391899665193608954}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: -750, y: 500, z: -246}
@@ -10642,8 +10650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b643e5d4e1cae9240984534c5a6f2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manifestController: {fileID: 0}
-  spaceObject: {fileID: 0}
+  manifestController: {fileID: 467586022}
+  spaceObject: {fileID: 8391899665193608954}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: 900, y: 350, z: 945}
