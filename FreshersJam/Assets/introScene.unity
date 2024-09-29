@@ -177,9 +177,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "You are a salvager.  \n\nYou have accepted a contract to recover salvage
-    from a destroyed ship. \n\nThe team sent to escourt you has left. They tell you
-    to send out a signal when you're done.\n\nAfter picking up some nearby salvage
-    you notice something.\n\nThe scanner detects survivors. "
+    from a destroyed ship. \n\nThe ship sent by your employer has escorted you to
+    the area and left. They tell you to send out a signal when you're done.\n\nAfter
+    picking up some nearby salvage you notice something.\n\nThe scanner detects survivors. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
