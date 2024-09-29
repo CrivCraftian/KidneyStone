@@ -4179,8 +4179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b643e5d4e1cae9240984534c5a6f2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manifestController: {fileID: 0}
-  spaceObject: {fileID: 0}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: -324, y: -900, z: 0}
@@ -5614,8 +5612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b643e5d4e1cae9240984534c5a6f2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manifestController: {fileID: 0}
-  spaceObject: {fileID: 0}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: -750, y: 500, z: 0}
@@ -6087,10 +6083,6 @@ PrefabInstance:
       propertyPath: shipControllerRef
       value: 
       objectReference: {fileID: 467586018}
-    - target: {fileID: 7214037796235240391, guid: bd7bea1ad5b8158428cfd7b4f95338db, type: 3}
-      propertyPath: manifestController
-      value: 
-      objectReference: {fileID: 467586022}
     - target: {fileID: 9139755111898261063, guid: bd7bea1ad5b8158428cfd7b4f95338db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6801,8 +6793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b643e5d4e1cae9240984534c5a6f2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manifestController: {fileID: 0}
-  spaceObject: {fileID: 0}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
   position: {x: 900, y: 350, z: 0}
