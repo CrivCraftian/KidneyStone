@@ -13,7 +13,8 @@ public class playerInteract : MonoBehaviour
     Camera playerCamera;
     Ray ray;
     RaycastHit hit;
-    bool rayDetected, mouseClickActive = false;
+    bool rayDetected = false;
+    [HideInInspector] public bool mouseClickActive = false;
 
     // ensures that playerCamera is assigned
     private void Awake() { playerCamera = GetComponentInChildren<Camera>(); }

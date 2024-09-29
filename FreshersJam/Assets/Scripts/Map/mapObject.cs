@@ -75,7 +75,7 @@ public class mapObject : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.CompareTag("shipScanPos"))
+        if (collision.CompareTag("shipScanPos") && inRange)
         {
             onExit();
             inRange = false;

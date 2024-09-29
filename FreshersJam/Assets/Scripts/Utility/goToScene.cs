@@ -8,4 +8,6 @@ public class goToScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public static void quitGame() { Application.Quit(); }
 }

@@ -23,7 +23,7 @@ public class ShipController : MonoBehaviour
         FuelCount = 10;
         HullIntegrity = 10;
 
-        shipPosition = new Vector3(1000, -600, 0);
+        shipPosition = new Vector3(-900, -936, 353);
 
         fuelBarWidth = fuelBar.localScale.y/10f;
     }
