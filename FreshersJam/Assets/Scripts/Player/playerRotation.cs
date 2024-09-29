@@ -27,6 +27,7 @@ public class playerRotation : MonoBehaviour
 
     private void Start()
     {
+        forceCamera(new Vector2(0,0));
         // assigns default clamp values on start
         defaultHorClamp = horClamp;
         defaultVerClamp = verClamp;
