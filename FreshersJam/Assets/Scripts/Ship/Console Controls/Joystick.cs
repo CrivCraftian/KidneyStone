@@ -1,6 +1,5 @@
 
 using UnityEngine;
-using UnityEngine.Android;
 
 public enum Axis
 {
@@ -27,13 +26,12 @@ public class Joystick : MonoBehaviour, interactClass
     [SerializeField] private Transform temp;
 
     float AlteredPosition = 0f;
+
     float position;
 
     [SerializeField] bool reset = false;
-    bool outOfFuel = false;
-    bool clicked = false;
 
-    [HideInInspector] public bool paused = false;
+    bool clicked = false;
 
     public void useClick()
     {
@@ -68,21 +66,8 @@ public class Joystick : MonoBehaviour, interactClass
     // Update is called once per frame
     void Update()
     {
-        if (!paused && !outOfFuel)
-        {
-            Resetting();
-            MoveTowardMouse(Time.deltaTime);
-        }
-
-        if (controller.FuelCount > 0 && outOfFuel) { outOfFuel = false; }
-
-        if (controller.FuelCount < 1 && !outOfFuel) { outOfFuel = true; }
-
-        if (outOfFuel)
-        {
-            ResetPosition();
-            Resetting();
-        }
+        Resetting();
+        MoveTowardMouse(Time.deltaTime);
     }
 
     public void ResetPosition()
@@ -110,23 +95,12 @@ public class Joystick : MonoBehaviour, interactClass
         {
             case Axis.X:
                 controller.AlterPosition(new Vector3(AlteredPosition, 0, 0));
-                
-                if (AlteredPosition < 0)  { controller.movementCounter -= AlteredPosition; }
-                if (AlteredPosition > 0) { controller.movementCounter += AlteredPosition; }
-
                 break;
             case Axis.Y:
                 controller.AlterPosition(new Vector3(0, AlteredPosition, 0));
-
-                if (AlteredPosition < 0) { controller.movementCounter -= AlteredPosition; }
-                if (AlteredPosition > 0) { controller.movementCounter += AlteredPosition; }
-
                 break;
             case Axis.Z:
                 controller.AlterPosition(new Vector3(0, 0, AlteredPosition));
-
-                if (AlteredPosition < 0) { controller.movementCounter -= AlteredPosition; }
-                if (AlteredPosition > 0) { controller.movementCounter += AlteredPosition; }
                 break;
         }
 
