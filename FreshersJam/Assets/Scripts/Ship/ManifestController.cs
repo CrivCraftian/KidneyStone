@@ -6,6 +6,7 @@ using UnityEngine;
 public class ManifestController : MonoBehaviour
 {
     [SerializeField] PodController podController;
+    [SerializeField] ShipController shipController;
 
     [SerializeField] TextMeshProUGUI MName;
     [SerializeField] TextMeshProUGUI MDesc;
@@ -21,7 +22,9 @@ public class ManifestController : MonoBehaviour
         lastMessager = origin;
         MName.text = SpaceObject.GetName();
         MDesc.text = SpaceObject.GetDescription();
-        MValue.text = "" + SpaceObject.GetValue();
+        if (SpaceObject.GetAltCheck()) { MValue.text = "" + SpaceObject.GetAltValue(); }
+        else { MValue.text = "" + SpaceObject.GetValue(); }
+        
     }
 
     public void ClearManifest()
@@ -40,12 +43,24 @@ public class ManifestController : MonoBehaviour
             return;
         }
 
-        if (podController.FillPod(storedObject))
+        if (storedObject.GetType() == typeof(Fuel)) 
         {
+            shipController.AlterFuel(shipController.FuelCount + storedObject.GetValue());
             lastMessager.SpaceObjectProcessed();
             ClearManifest();
             return;
         }
+
+        else
+        {
+            if (podController.FillPod(storedObject))
+            {
+                lastMessager.SpaceObjectProcessed();
+                ClearManifest();
+                return;
+            }
+        }
+
     }
 
     public void DenySpaceObject()

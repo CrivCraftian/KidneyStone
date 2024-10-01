@@ -83,7 +83,7 @@ public class ShipController : MonoBehaviour
         TextDisplays[2].text = "Z: " + (int)shipPosition.z;
     }
 
-    void AlterFuel(int fuel)
+    public void AlterFuel(int fuel)
     {
         FuelCount = Mathf.Clamp(fuel, 0, 10);
     }

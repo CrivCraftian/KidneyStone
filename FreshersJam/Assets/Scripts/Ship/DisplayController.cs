@@ -18,12 +18,6 @@ public class DisplayController : MonoBehaviour
         UpdatePodIcons();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void UpdatePodIcons()
     {
         for (int i = 0; i < PodImages.Count; i++)

@@ -12,20 +12,6 @@ public class EjectButton : MonoBehaviour, interactClass
         controller.EjectPod(podNum);
     }
 
-    public void useHold()
-    {
+    public void useHold() { }
 
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

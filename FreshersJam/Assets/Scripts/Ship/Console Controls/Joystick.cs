@@ -10,7 +10,7 @@ public enum Axis
 public class Joystick : MonoBehaviour, interactClass
 {
     [SerializeField] float MoveSpeed = 0.01f;
-    [SerializeField] Camera camera;
+    [SerializeField] new Camera camera;
 
     [SerializeField] private ShipController controller;
 
