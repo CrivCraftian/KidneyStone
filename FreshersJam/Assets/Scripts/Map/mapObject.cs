@@ -87,7 +87,20 @@ public class mapObject : MonoBehaviour, ISender
 
     private void onEnter()
     {
-        manifestController.SendToManifest(this, spaceObject);
+        if (spaceObject.GetType() == typeof(Debris))
+        {
+            shipControllerRef.AlterHull(shipControllerRef.HullIntegrity - 1);
+
+            if (shipControllerRef.HullIntegrity < 1)
+            {
+                spaceObject.GetComponent<Debris>().triggerFailState();
+            }
+
+            Destroy(this.gameObject);
+        }
+
+        else { manifestController.SendToManifest(this, spaceObject); }
+        
         determineColor(true);
     }
 

@@ -88,8 +88,8 @@ public class ShipController : MonoBehaviour
         FuelCount = Mathf.Clamp(fuel, 0, 10);
     }
 
-    void AlterHull(int hullintegrity)
+    public void AlterHull(int hullintegrity)
     {
-        FuelCount = Mathf.Clamp(hullintegrity, 0, 10);
+        HullIntegrity = Mathf.Clamp(hullintegrity, 0, 10);
     }
 }
