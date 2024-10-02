@@ -20,6 +20,7 @@ public class mapObject : MonoBehaviour, ISender
         "(higher number = player doesnt have to be so close to z position)\n\n" +
         "EXAMPLE: if Z is 200 and range is 100, player can be between 100 and 300 and be in range to interact with it")] public float zAxisRange = 100;
 
+[SerializeField] bool showPosition = true;
     [Tooltip("when player is in range")] public Color inRangeColor;
     [Tooltip("when player is in z axis range")] public Color inZRangeColor;
     [Tooltip("when player is outside range")] public Color outRangeColor;
@@ -30,11 +31,22 @@ public class mapObject : MonoBehaviour, ISender
     bool inZAxisRange = false; // -- use when implementing z axis checking
     bool inRange = false;
 
+    private void OnValidate()
+    {
+        coordsRef = GetComponentInChildren<TMP_Text>();
+        GetComponent<RawImage>().enabled = false;
+        coordsRef.text = null;
+    }
+
+
     private void Awake()
     {
-        // gets and assigns the text above the object its position
-        coordsRef = GetComponentInChildren<TMP_Text>();
-        coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z);
+        GetComponent<RawImage>().enabled = true;
+
+        // assigns the text above the object its position
+        if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
+        else { coordsRef.text = null; }
+
 
         // puts the object in its position on the map and sets its color to be out of range
         Vector3 mapPos = mapContollerRef.normPosToMapScreenPos(mapContollerRef.mapPosToNormPos(position));
@@ -89,14 +101,18 @@ public class mapObject : MonoBehaviour, ISender
     {
         if (spaceObject.GetType() == typeof(Debris))
         {
-            shipControllerRef.AlterHull(shipControllerRef.HullIntegrity - 1);
+            shipControllerRef.AlterHull(shipControllerRef.HullIntegrity - spaceObject.GetValue());
+            manifestController.SendToManifest(this, spaceObject);
 
             if (shipControllerRef.HullIntegrity < 1)
             {
                 spaceObject.GetComponent<Debris>().triggerFailState();
             }
 
-            Destroy(this.gameObject);
+            if (!spaceObject.GetComponent<Debris>().dontDestroy)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
         else { manifestController.SendToManifest(this, spaceObject); }

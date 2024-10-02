@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &693287710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2415, y: 188.15929}
-  m_SizeDelta: {x: 1847.635, y: 599.3015}
+  m_AnchoredPosition: {x: 0.0000161, y: 172}
+  m_SizeDelta: {x: 1847.635, y: 660}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693287711
 MonoBehaviour:
@@ -178,8 +178,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "You are a salvager.  \n\nYou have accepted a contract to recover salvage
     from a destroyed ship. \n\nA ship sent by your employer has escorted you to the
-    area and left. They tell you to send out a signal when you're done.\n\nAfter
-    picking up some nearby salvage you notice something.\n\nThe scanner detects survivors. "
+    area and left. They tell you to send out a signal when you're done.\n\nYou check
+    the scanner to see if anything is detected. Debris, fuel tanks, salvage...wait.\n\nThe
+    scanner detects survivors."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -206,8 +207,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.8
-  m_fontSizeBase: 50.8
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1012,7 +1013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1597913793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1029,7 +1030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 190}
+  m_AnchoredPosition: {x: 0, y: 223.7}
   m_SizeDelta: {x: 2024.2983, y: 578.2064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597913794
@@ -1075,7 +1076,7 @@ MonoBehaviour:
     INTERACTABLE
 
 
-'
+    IF YOU EJECT A POD, IT CANNOT BE RECOVERED.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1102,8 +1103,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.13
-  m_fontSizeBase: 47.13
+  m_fontSize: 45.5
+  m_fontSizeBase: 45.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

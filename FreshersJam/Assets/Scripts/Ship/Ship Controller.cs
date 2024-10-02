@@ -13,6 +13,7 @@ public class ShipController : MonoBehaviour
 
     float fuelBarWidth = 0;
 
+    [SerializeField] Vector3 startPos = new Vector3(-900, -936, 353);
     [SerializeField] ManifestController manifestController;
 
     [SerializeField] private RectTransform fuelBar;
@@ -26,7 +27,7 @@ public class ShipController : MonoBehaviour
         FuelCount = 10;
         HullIntegrity = 10;
 
-        shipPosition = new Vector3(-900, -936, 353);
+        shipPosition = startPos;
 
         fuelBarWidth = fuelBar.localScale.y/10f;
     }

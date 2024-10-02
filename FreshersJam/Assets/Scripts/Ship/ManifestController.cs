@@ -38,7 +38,7 @@ public class ManifestController : MonoBehaviour
 
     public void AcceptSpaceObject()
     {
-        if(storedObject == null)
+        if(storedObject == null || storedObject.GetType() == typeof(Debris))
         {
             return;
         }
