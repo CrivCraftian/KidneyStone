@@ -6,7 +6,7 @@ using UnityEngine;
 public class PodController : MonoBehaviour
 {
     [SerializeField] DisplayController displayController;
-    [SerializeField] List<PodV2> podsV2;
+    public List<PodV2> podsV2;
     List<Pod> pods = new List<Pod>(6);
 
     public PodController() 
@@ -33,6 +33,7 @@ public class PodController : MonoBehaviour
                     personRef.ChangeValue(spaceObject.GetValue());
                     personRef.ChangeAltValue(spaceObject.GetAltValue());
                     personRef.ChangeAltCheck(spaceObject.GetAltCheck());
+                    personRef.ChangeSpecialID(spaceObject.GetSpecialID());
 
                     podsV2[i].FillPod(personRef);
                 }
@@ -47,6 +48,7 @@ public class PodController : MonoBehaviour
                     scrapRef.ChangeValue(spaceObject.GetValue());
                     scrapRef.ChangeAltValue(spaceObject.GetAltValue());
                     scrapRef.ChangeAltCheck(spaceObject.GetAltCheck());
+                    scrapRef.ChangeSpecialID(spaceObject.GetSpecialID());
 
                     podsV2[i].FillPod(scrapRef);
                 }

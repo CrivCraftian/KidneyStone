@@ -7,6 +7,7 @@ public abstract class AbstractSObject : MonoBehaviour
     [SerializeField] protected string AltValue;
     [SerializeField] protected int Value;
     [SerializeField] protected bool DisplayAltValue;
+    [SerializeField] protected string SpecialID;
 
     public string GetName()
     {
@@ -33,30 +34,38 @@ public abstract class AbstractSObject : MonoBehaviour
         return DisplayAltValue;
     }
 
-    //
+    public string GetSpecialID()
+    {
+        return SpecialID;
+    }
 
     public void ChangeName(string newName)
     {
         Name = newName;
     }
 
-    public void ChangeDescription(string newName)
+    public void ChangeDescription(string newDescription)
     {
-        Description = newName;
+        Description = newDescription;
     }
 
-    public void ChangeValue(int newName)
+    public void ChangeValue(int newValue)
     {
-        Value = newName;
+        Value = newValue;
     }
 
-    public void ChangeAltValue(string newName)
+    public void ChangeAltValue(string newAltValue)
     {
-        AltValue = newName;
+        AltValue = newAltValue;
     }
 
-    public void ChangeAltCheck(bool newName)
+    public void ChangeAltCheck(bool newAltCheck)
     {
-        DisplayAltValue = newName;
+        DisplayAltValue = newAltCheck;
+    }
+
+    public void ChangeSpecialID(string newID)
+    {
+        SpecialID = newID;
     }
 }

@@ -15,6 +15,7 @@ public class ShipController : MonoBehaviour
 
     [SerializeField] Vector3 startPos = new Vector3(-900, -936, 353);
     [SerializeField] ManifestController manifestController;
+    [SerializeField] GameObject failState;
 
     [SerializeField] private RectTransform fuelBar;
     [SerializeField] private RectTransform HullBar;
@@ -48,6 +49,12 @@ public class ShipController : MonoBehaviour
         {
             movementCounter = 0;
             AlterFuel(FuelCount-1);
+
+            if (FuelCount < 1) 
+            {
+                failState.SetActive(true);
+            }
+           
         }
     }
 

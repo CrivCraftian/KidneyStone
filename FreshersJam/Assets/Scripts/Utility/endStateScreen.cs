@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class failStateScreen : MonoBehaviour
+public class endStateScreen : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] TMP_Text failResult;
+    [SerializeField] TMP_Text endStateTextRef;
     [SerializeField] List<Joystick> joysticks;
-    public string failText;
+    public string endStateText;
 
     playerRotation playerRotationRef;
     playerMovement playerMovementRef;
@@ -19,7 +19,7 @@ public class failStateScreen : MonoBehaviour
         playerMovementRef = player.GetComponent<playerMovement>();
         playerInteractRef = player.GetComponent<playerInteract>();
 
-        failResult.text = failText;
+        endStateTextRef.text = endStateText;
 
         playerRotationRef.cameraToggle = false;
         playerMovementRef.movementToggle = false;
