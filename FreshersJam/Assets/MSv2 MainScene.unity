@@ -771,8 +771,8 @@ MonoBehaviour:
   position: {x: -104, y: -364, z: -452}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &47953359
 MonoBehaviour:
@@ -809,6 +809,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47953353}
   m_CullTransparentMesh: 1
+--- !u!1 &53487070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53487071}
+  m_Layer: 0
+  m_Name: PODS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53487071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53487070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.0392356, y: 1.8315167, z: 24.731459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2077817561}
+  - {fileID: 1769157940}
+  - {fileID: 2022776632}
+  - {fileID: 1188946913}
+  - {fileID: 920947647}
+  - {fileID: 524404305}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &63163075 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6050005408414814204, guid: 42b8d6b8e3bcd1642a9c557a2f396084, type: 3}
@@ -1663,11 +1700,11 @@ MonoBehaviour:
   spaceObject: {fileID: 213010908}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: 200, y: -640, z: 152}
+  position: {x: -358, y: 837, z: 452}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0, g: 0.6911516, b: 1, a: 1}
+  inZRangeColor: {r: 0.76862746, g: 0.9566213, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &213010910
 MonoBehaviour:
@@ -2745,8 +2782,8 @@ MonoBehaviour:
   position: {x: 789, y: -190, z: -632}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &342430369
 MonoBehaviour:
@@ -4570,6 +4607,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayController: {fileID: 467586020}
+  podsV2:
+  - {fileID: 2077817562}
+  - {fileID: 1769157941}
+  - {fileID: 2022776633}
+  - {fileID: 1188946914}
+  - {fileID: 920947648}
+  - {fileID: 524404306}
 --- !u!114 &467586022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4749,7 +4793,7 @@ MonoBehaviour:
   spaceObject: {fileID: 483190103}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -572, y: -840, z: 152}
+  position: {x: 100, y: -840, z: 152}
   zAxisRange: 75
   showPosition: 1
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
@@ -5281,6 +5325,51 @@ MonoBehaviour:
   - {fileID: 1689733671}
   - {fileID: 1479098158}
   pauseToggle: 1
+--- !u!1 &524404304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524404305}
+  - component: {fileID: 524404306}
+  m_Layer: 0
+  m_Name: pod6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524404305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524404304}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53487071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524404306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524404304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7333d5a86b6d2944cbe0f4c36bafef16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  store: {fileID: 0}
 --- !u!1 &531347540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,11 +5493,11 @@ MonoBehaviour:
   spaceObject: {fileID: 531347544}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -200, y: -640, z: 152}
+  position: {x: 643, y: -154, z: 134}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0, g: 0.6911516, b: 1, a: 1}
+  inZRangeColor: {r: 0.76862746, g: 0.9566213, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &531347546
 MonoBehaviour:
@@ -5959,11 +6048,11 @@ MonoBehaviour:
   spaceObject: {fileID: 588849415}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -400, y: -640, z: 152}
+  position: {x: 427, y: 211, z: -240}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0, g: 0.6911516, b: 1, a: 1}
+  inZRangeColor: {r: 0.76862746, g: 0.9566213, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &588849417
 MonoBehaviour:
@@ -8149,8 +8238,8 @@ MonoBehaviour:
   position: {x: -656, y: -124, z: 279}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &882616524
 MonoBehaviour:
@@ -8459,6 +8548,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918132774}
   m_CullTransparentMesh: 1
+--- !u!1 &920947646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920947647}
+  - component: {fileID: 920947648}
+  m_Layer: 0
+  m_Name: pod5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920947647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920947646}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53487071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920947648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920947646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7333d5a86b6d2944cbe0f4c36bafef16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  store: {fileID: 0}
 --- !u!1 &928455028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8771,11 +8905,11 @@ MonoBehaviour:
   spaceObject: {fileID: 962052639}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -800, y: -640, z: 152}
+  position: {x: -141, y: 334, z: 315}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0, g: 0.6911516, b: 1, a: 1}
+  inZRangeColor: {r: 0.76862746, g: 0.9566213, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &962052641
 MonoBehaviour:
@@ -10702,6 +10836,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 959289154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1188946912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1188946913}
+  - component: {fileID: 1188946914}
+  m_Layer: 0
+  m_Name: pod4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1188946913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188946912}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53487071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1188946914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188946912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7333d5a86b6d2944cbe0f4c36bafef16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  store: {fileID: 0}
 --- !u!1 &1191799741
 GameObject:
   m_ObjectHideFlags: 0
@@ -11357,8 +11536,8 @@ MonoBehaviour:
   position: {x: 822, y: 754, z: 547}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &1290005003
 MonoBehaviour:
@@ -11836,11 +12015,11 @@ MonoBehaviour:
   spaceObject: {fileID: 1355876408}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -600, y: -640, z: 152}
+  position: {x: -854, y: -422, z: 152}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0, g: 0.6911516, b: 1, a: 1}
+  inZRangeColor: {r: 0.76862746, g: 0.9566213, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &1355876410
 MonoBehaviour:
@@ -12093,11 +12272,11 @@ MonoBehaviour:
   spaceObject: {fileID: 1374126435}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: 0, y: -640, z: 152}
+  position: {x: -259, y: -842, z: 23}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0, g: 0.6911516, b: 1, a: 1}
+  inZRangeColor: {r: 0.76862746, g: 0.9566213, b: 1, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &1374126437
 MonoBehaviour:
@@ -12295,8 +12474,8 @@ MonoBehaviour:
   position: {x: -873, y: 843, z: 638}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &1386370099
 MonoBehaviour:
@@ -14999,8 +15178,8 @@ MonoBehaviour:
   position: {x: 500, y: -490, z: 411}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &1650831033
 MonoBehaviour:
@@ -15659,6 +15838,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711733923}
   m_CullTransparentMesh: 1
+--- !u!1 &1769157939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769157940}
+  - component: {fileID: 1769157941}
+  m_Layer: 0
+  m_Name: pod2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1769157940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769157939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53487071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769157941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769157939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7333d5a86b6d2944cbe0f4c36bafef16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  store: {fileID: 0}
 --- !u!1 &1778281309
 GameObject:
   m_ObjectHideFlags: 0
@@ -16601,8 +16825,8 @@ MonoBehaviour:
   position: {x: -572, y: -840, z: 152}
   zAxisRange: 75
   showPosition: 1
-  inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
-  inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
+  inRangeColor: {r: 0.40771866, g: 1, b: 0, a: 1}
+  inZRangeColor: {r: 0.84551764, g: 1, b: 0.76862746, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
 --- !u!114 &1872601005
 MonoBehaviour:
@@ -18045,6 +18269,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015084477}
   m_CullTransparentMesh: 1
+--- !u!1 &2022776631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022776632}
+  - component: {fileID: 2022776633}
+  m_Layer: 0
+  m_Name: pod3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022776632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022776631}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53487071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022776633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022776631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7333d5a86b6d2944cbe0f4c36bafef16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  store: {fileID: 0}
 --- !u!1 &2027006563
 GameObject:
   m_ObjectHideFlags: 0
@@ -18493,6 +18762,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 959289154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2077817560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2077817561}
+  - component: {fileID: 2077817562}
+  m_Layer: 0
+  m_Name: pod1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2077817561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077817560}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53487071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077817562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077817560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7333d5a86b6d2944cbe0f4c36bafef16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  store: {fileID: 0}
 --- !u!1 &2084100784
 GameObject:
   m_ObjectHideFlags: 0
@@ -26517,3 +26831,4 @@ SceneRoots:
   - {fileID: 959289154}
   - {fileID: 1450231215}
   - {fileID: 1153479295}
+  - {fileID: 53487071}

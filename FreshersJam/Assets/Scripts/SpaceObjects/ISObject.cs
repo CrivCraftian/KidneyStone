@@ -32,4 +32,31 @@ public abstract class AbstractSObject : MonoBehaviour
     {
         return DisplayAltValue;
     }
+
+    //
+
+    public void ChangeName(string newName)
+    {
+        Name = newName;
+    }
+
+    public void ChangeDescription(string newName)
+    {
+        Description = newName;
+    }
+
+    public void ChangeValue(int newName)
+    {
+        Value = newName;
+    }
+
+    public void ChangeAltValue(string newName)
+    {
+        AltValue = newName;
+    }
+
+    public void ChangeAltCheck(bool newName)
+    {
+        DisplayAltValue = newName;
+    }
 }
