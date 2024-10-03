@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 public class mapObject : MonoBehaviour, ISender
 {
@@ -34,13 +35,29 @@ public class mapObject : MonoBehaviour, ISender
     private void OnValidate()
     {
         coordsRef = GetComponentInChildren<TMP_Text>();
-        GetComponent<RawImage>().enabled = false;
+        GetComponent<RawImage>().enabled = true;
         coordsRef.text = null;
     }
 
+    private void Start()
+    {
+        coordsRef = GetComponentInChildren<TMP_Text>();
+        GetComponent<RawImage>().enabled = true;
+
+        // assigns the text above the object its position
+        if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
+        else { coordsRef.text = null; }
+
+
+        // puts the object in its position on the map and sets its color to be out of range
+        Vector3 mapPos = mapContollerRef.normPosToMapScreenPos(mapContollerRef.mapPosToNormPos(position));
+        transform.localPosition = new Vector3(mapPos.x, mapPos.y, transform.localPosition.z);
+        GetComponent<RawImage>().color = outRangeColor;
+    }
 
     private void Awake()
     {
+        coordsRef = GetComponentInChildren<TMP_Text>();
         GetComponent<RawImage>().enabled = true;
 
         // assigns the text above the object its position
