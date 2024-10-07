@@ -3169,6 +3169,7 @@ GameObject:
   - component: {fileID: 344715757}
   - component: {fileID: 344715752}
   - component: {fileID: 344715751}
+  - component: {fileID: 344715758}
   m_Layer: 0
   m_Name: Debris_4
   m_TagString: Untagged
@@ -3260,9 +3261,9 @@ MonoBehaviour:
   spaceObject: {fileID: 344715757}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: 154, y: -467, z: 893}
-  zAxisRange: 75
-  showPosition: 1
+  position: {x: 154, y: -467, z: 0}
+  zAxisRange: 1000
+  showPosition: 0
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
   inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
@@ -3321,6 +3322,19 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 1
+--- !u!114 &344715758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344715749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b837a80414746943c862e2783c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &351856445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,6 +3459,7 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 0
 --- !u!114 &351856451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3762,6 +3777,7 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 0
 --- !u!114 &354979463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,7 +4939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baca3af37ff7852448cd7cee44516738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementCounterLimit: 2600
+  movementCounterLimit: 2000
   movementCounter: 0
   startPos: {x: -850, y: -900, z: 152}
   manifestController: {fileID: 467586022}
@@ -5062,6 +5078,7 @@ GameObject:
   - component: {fileID: 483190107}
   - component: {fileID: 483190102}
   - component: {fileID: 483190101}
+  - component: {fileID: 483190108}
   m_Layer: 0
   m_Name: Debris_5
   m_TagString: Untagged
@@ -5153,9 +5170,9 @@ MonoBehaviour:
   spaceObject: {fileID: 483190107}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: 746, y: -840, z: 362}
-  zAxisRange: 75
-  showPosition: 1
+  position: {x: 746, y: -840, z: 0}
+  zAxisRange: 1000
+  showPosition: 0
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
   inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
@@ -5214,6 +5231,19 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 1
+--- !u!114 &483190108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483190099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b837a80414746943c862e2783c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &485023702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7195,6 +7225,7 @@ GameObject:
   - component: {fileID: 612808266}
   - component: {fileID: 612808261}
   - component: {fileID: 612808260}
+  - component: {fileID: 612808267}
   m_Layer: 0
   m_Name: Debris_1
   m_TagString: Untagged
@@ -7286,9 +7317,9 @@ MonoBehaviour:
   spaceObject: {fileID: 612808266}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -373, y: 155, z: 626}
-  zAxisRange: 100
-  showPosition: 1
+  position: {x: -373, y: 155, z: 0}
+  zAxisRange: 1000
+  showPosition: 0
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
   inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
@@ -7347,6 +7378,19 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 1
+--- !u!114 &612808267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612808258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b837a80414746943c862e2783c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619289005
 GameObject:
   m_ObjectHideFlags: 0
@@ -9434,6 +9478,7 @@ GameObject:
   - component: {fileID: 869563786}
   - component: {fileID: 869563781}
   - component: {fileID: 869563780}
+  - component: {fileID: 869563787}
   m_Layer: 0
   m_Name: Debris_2
   m_TagString: Untagged
@@ -9525,9 +9570,9 @@ MonoBehaviour:
   spaceObject: {fileID: 869563786}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: 572, y: 825, z: -364}
-  zAxisRange: 75
-  showPosition: 1
+  position: {x: 572, y: 825, z: 0}
+  zAxisRange: 1000
+  showPosition: 0
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
   inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
@@ -9586,6 +9631,19 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 1
+--- !u!114 &869563787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869563778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b837a80414746943c862e2783c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &878074174
 GameObject:
   m_ObjectHideFlags: 0
@@ -16090,7 +16148,7 @@ MonoBehaviour:
     INTERACTABLE
 
 
-    IF YOU EJECT A POD, IT CANNOT BE RECOVERED.'
+    IF YOU EJECT A POD, THE CONTENTS CANNOT BE RECOVERED.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21334,6 +21392,7 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 0
 --- !u!114 &2027006569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21489,6 +21548,7 @@ GameObject:
   - component: {fileID: 2054712112}
   - component: {fileID: 2054712107}
   - component: {fileID: 2054712106}
+  - component: {fileID: 2054712113}
   m_Layer: 0
   m_Name: Debris_3
   m_TagString: Untagged
@@ -21580,9 +21640,9 @@ MonoBehaviour:
   spaceObject: {fileID: 2054712112}
   mapContollerRef: {fileID: 3779549995495342818}
   shipControllerRef: {fileID: 467586018}
-  position: {x: -705, y: 305, z: 642}
-  zAxisRange: 75
-  showPosition: 1
+  position: {x: -705, y: 305, z: 0}
+  zAxisRange: 1000
+  showPosition: 0
   inRangeColor: {r: 1, g: 0, b: 0.083632946, a: 1}
   inZRangeColor: {r: 1, g: 0.7688679, b: 0.7879522, a: 1}
   outRangeColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6039216}
@@ -21641,6 +21701,19 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 1
+--- !u!114 &2054712113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054712104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0b837a80414746943c862e2783c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2072098498
 GameObject:
   m_ObjectHideFlags: 0
@@ -29128,6 +29201,7 @@ MonoBehaviour:
   SpecialID: 
   failState: {fileID: 1677298103}
   dontDestroy: 1
+  showWarning: 0
 --- !u!33 &8276621263915240538
 MeshFilter:
   m_ObjectHideFlags: 0

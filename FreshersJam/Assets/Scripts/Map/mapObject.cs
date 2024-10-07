@@ -45,8 +45,22 @@ public class mapObject : MonoBehaviour, ISender
         GetComponent<RawImage>().enabled = true;
 
         // assigns the text above the object its position
-        if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
-        else { coordsRef.text = null; }
+        // assigns the text above the object its position
+        if (spaceObject.GetType() == typeof(Debris))
+        {
+            if (spaceObject.GetComponent<Debris>().showWarning) { coordsRef.text = "[DEBRIS - AVOID]"; }
+            else
+            { 
+                if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); } 
+            }
+
+        }
+
+        else
+        {
+            if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
+            else { coordsRef.text = null; }
+        }
 
 
         // puts the object in its position on the map and sets its color to be out of range
@@ -61,9 +75,20 @@ public class mapObject : MonoBehaviour, ISender
         GetComponent<RawImage>().enabled = true;
 
         // assigns the text above the object its position
-        if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
-        else { coordsRef.text = null; }
+        if (spaceObject.GetType() == typeof(Debris)) 
+        {
+            if (spaceObject.GetComponent<Debris>().showWarning)  { coordsRef.text = "[DEBRIS - AVOID]"; }
+            else
+            {
+                if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
+            }
+        }
 
+        else
+        {
+            if (showPosition) { coordsRef.text = string.Format("({0}, {1}, {2})", position.x, position.y, position.z); }
+            else { coordsRef.text = null; }
+        }
 
         // puts the object in its position on the map and sets its color to be out of range
         Vector3 mapPos = mapContollerRef.normPosToMapScreenPos(mapContollerRef.mapPosToNormPos(position));

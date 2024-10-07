@@ -44,11 +44,11 @@ public class signalButton : MonoBehaviour, interactClass
     {
         if (canUseSignal)
         {
-            if (isHolding && playerInteractRef.mouseClickActive) { value += 0.003f; }
+            if (isHolding && playerInteractRef.mouseClickActive) { value += 0.004f; }
 
             if (isHolding && !playerInteractRef.mouseClickActive)
             {
-                value -= 0.003f;
+                value -= 0.004f;
                 if (value <= 0) 
                 { 
                     isHolding = false;
