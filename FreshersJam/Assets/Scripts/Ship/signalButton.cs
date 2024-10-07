@@ -44,11 +44,11 @@ public class signalButton : MonoBehaviour, interactClass
     {
         if (canUseSignal)
         {
-            if (isHolding && playerInteractRef.mouseClickActive) { value += 0.0015f; }
+            if (isHolding && playerInteractRef.mouseClickActive) { value += 0.003f; }
 
             if (isHolding && !playerInteractRef.mouseClickActive)
             {
-                value -= 0.0025f;
+                value -= 0.003f;
                 if (value <= 0) 
                 { 
                     isHolding = false;
@@ -96,21 +96,26 @@ public class signalButton : MonoBehaviour, interactClass
                 {
                     // scrap
                     case "scientific":
+                        if (scrapValTotal == -1) { scrapValTotal = 0; }
                         scrapValTotal += podControllerRef.podsV2[i].PodContents().GetValue();
                         break;
                     case "scrap":
+                        if (scrapValTotal == -1) { scrapValTotal = 0; }
                         scrapValTotal += podControllerRef.podsV2[i].PodContents().GetValue();
                         break;
                     case "comp":
+                        if (scrapValTotal == -1) { scrapValTotal = 0; }
                         scrapValTotal += podControllerRef.podsV2[i].PodContents().GetValue();
                         break;
                     case "device":
+                        if (scrapValTotal == -1) { scrapValTotal = 0; }
                         scrapValTotal += podControllerRef.podsV2[i].PodContents().GetValue();
                         break;
                     case "corpse":
-                        returnString += "The corpses you retrieved were returned to their families";
+                        returnString += "The corpses you retrieved were returned to their families.\n\n";
                         break;
                     case "storage":
+                        if (scrapValTotal == -1) { scrapValTotal = 0; }
                         scrapValTotal += podControllerRef.podsV2[i].PodContents().GetValue();
                         break;
 
@@ -131,7 +136,7 @@ public class signalButton : MonoBehaviour, interactClass
                         returnString += string.Format("The engineer went insane.\n\n");
                         break;
                     case "camera":
-                        returnString += string.Format("The man found inside the pod with the camera footage became a suspect of whatever happened to the ship\n\n");
+                        returnString += string.Format("The man found inside the pod with the camera footage became a suspect of whatever happened to the ship.\n\n");
                         break;
                     case "data":
                         returnString += string.Format("The woman found inside the pod was safe.\nThe data on the pod revealed the company was working on a secret project.\n\n");
@@ -144,7 +149,7 @@ public class signalButton : MonoBehaviour, interactClass
 
         if (scrapValTotal > 0) 
         {
-            returnString += string.Format("The scrap was sold for a total of {0} units", scrapValTotal);
+            returnString += string.Format("The scrap was sold for a total of {0} units.", scrapValTotal);
         }
 
         else if (scrapValTotal == -1)
