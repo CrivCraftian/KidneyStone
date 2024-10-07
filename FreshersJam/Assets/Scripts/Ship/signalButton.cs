@@ -124,7 +124,7 @@ public class signalButton : MonoBehaviour, interactClass
                         returnString += string.Format("The wounded man was able to get treatment for his injuries.\n\n");
                         break;
                     case "uncon":
-                        returnString += string.Format("The wounded man was able to get treatment for his injuries.\n\n");
+                        returnString += string.Format("The unconcious woman recovered by the time you returned.\n\n");
                         break;
                     case "multiple":
                         returnString += string.Format("The pod with multiple people turned out to be a family who managed to escape.\n\n");
